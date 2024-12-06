@@ -36,13 +36,11 @@ spring:
               - DELETE
 
 management:
-  info:
-    env:
-      enabled: true
   endpoint:
     gateway:
       enabled: true
   endpoints:
     web:
       exposure:
-        include: health,info,env,beans
+        include:
+          - '*'
