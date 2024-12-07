@@ -8,6 +8,7 @@
 
 FROM maven:3.9.9-eclipse-temurin-8-focal AS build
 COPY . .
+RUN mvn clean install
 RUN mvn clean package
 
 # Usamos una imagen de Openjdk
