@@ -8,8 +8,7 @@
 
 FROM maven:3.9.9-eclipse-temurin-8-focal AS build
 COPY . .
-RUN mvn clean install
-RUN mvn clean package
+RUN mvn clean package -e
 
 # Usamos una imagen de Openjdk
 # Exponemos el puerto que nuestro componente va a usar para escuchar peticiones
